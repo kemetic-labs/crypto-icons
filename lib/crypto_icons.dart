@@ -1,0 +1,1 @@
+library crypto_icons;
