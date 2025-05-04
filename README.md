@@ -66,7 +66,11 @@ CryptoIcon(CryptoConstants.bitcoin, color: Colors.orange)
 
 ```dart
 // Dynamic selection by symbol (case-insensitive)
+// Supports ALL 474+ cryptocurrency symbols
 Icon(CryptoIconsExtension.fromSymbol('BTC'))
+Icon(CryptoIconsExtension.fromSymbol('ETH'))
+Icon(CryptoIconsExtension.fromSymbol('DOGE'))
+// ... and 471+ more
 ```
 
 ## Available Icons
