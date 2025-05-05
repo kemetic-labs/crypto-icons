@@ -94,7 +94,7 @@ class CryptoIcons {
   /// 0xbtc
   static const IconData zeroXbtc = IconData(0xE002, fontFamily: _fontFamily);
   /// 2give
-  static const IconData _2give = IconData(0xE003, fontFamily: _fontFamily);
+  static const IconData twoGive = IconData(0xE003, fontFamily: _fontFamily);
   /// abt
   static const IconData abt = IconData(0xE005, fontFamily: _fontFamily);
   /// act
@@ -987,33 +987,4 @@ class CryptoIcons {
   static const IconData zilla = IconData(0xE1D9, fontFamily: _fontFamily);
   /// zrx
   static const IconData zrx = IconData(0xE1DA, fontFamily: _fontFamily);
-}}
-
-/// A widget that displays a cryptocurrency icon from the CryptoIcons font.
-///
-/// This widget can be used as a drop-in replacement for the CryptoIcon widget
-/// from the crypto_icons_flutter package.
-class CryptoIcon extends StatelessWidget {
-  const CryptoIcon({super.key});
-{
-  /// The icon to display
-  final IconData icon;
-  
-  /// The size of the icon
-  final double size;
-  
-  /// The color of the icon
-  final Color color;
-
-  /// Creates a new CryptoIcon widget.
-  const CryptoIcon(this.icon, {{Key? key, this.size = 24.0, required this.color}}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {{
-    return Icon(
-      icon,
-      size: size,
-      color: color,
-    );
-  }}
-}}
+}

@@ -18,12 +18,13 @@
 ///    ```
 library crypto_icons;
 
-import "package:flutter/widgets.dart";
-import "src/crypto_icons_data.dart";
+import 'package:flutter/widgets.dart';
+import 'src/crypto_icons_data.dart';
+import 'src/crypto_symbol_map.dart';
 
-export "src/crypto_icon.dart";
-export "src/crypto_icons_data.dart";
-export "src/crypto_constants.dart";
+export 'src/crypto_icon.dart';
+export 'src/crypto_icons_data.dart';
+export 'src/crypto_constants.dart';
 
 /// Extension methods for CryptoIcons
 extension CryptoIconsExtension on CryptoIcons {
@@ -33,36 +34,19 @@ extension CryptoIconsExtension on CryptoIcons {
   ///
   /// Example:
   /// ```dart
-  /// IconData bitcoinIcon = CryptoIconsExtension.fromSymbol("BTC");
+  /// IconData bitcoinIcon = CryptoIconsExtension.fromSymbol('BTC');
   /// ```
   ///
   /// Throws an [ArgumentError] if the symbol is not found.
   static IconData fromSymbol(String symbol) {
-    final symbolMap = <String, IconData>{
-      "aave": CryptoIcons.aave,
-      "ada": CryptoIcons.ada,
-      "btc": CryptoIcons.btc,
-      "eth": CryptoIcons.eth,
-      "bnb": CryptoIcons.bnb,
-      "sol": CryptoIcons.sol,
-      "xrp": CryptoIcons.xrp,
-      "dot": CryptoIcons.dot,
-      "doge": CryptoIcons.doge,
-      "ltc": CryptoIcons.ltc,
-      "link": CryptoIcons.link,
-      "usdt": CryptoIcons.usdt,
-      "usdc": CryptoIcons.usdc,
-      "dai": CryptoIcons.dai,
-      "uni": CryptoIcons.uni,
-      "matic": CryptoIcons.matic,
-      // Add more mappings as needed
-    };
+    // Get the complete symbol map with all cryptocurrency icons
+    final symbolMap = CryptoSymbolMap.getCompleteSymbolMap();
 
     final normalizedSymbol = symbol.toLowerCase();
     final iconData = symbolMap[normalizedSymbol];
 
     if (iconData == null) {
-      throw ArgumentError("No icon found for symbol: $symbol");
+      throw ArgumentError('No icon found for symbol: $symbol');
     }
 
     return iconData;
