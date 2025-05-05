@@ -7,14 +7,14 @@
 ///
 /// There are two ways to access the icons:
 ///
-/// 1. Using the original symbol names via [CryptoIcons]:
+/// 1. Using the fromSymbol method (recommended for dynamic data):
 ///    ```dart
-///    Icon(CryptoIcons.btc, color: Colors.orange)
+///    Icon(CryptoIconsExtension.fromSymbol('btc'), color: Colors.orange)
 ///    ```
 ///
-/// 2. Using semantic names via [CryptoConstants] (recommended):
+/// 2. Using the CryptoIcon widget:
 ///    ```dart
-///    Icon(CryptoConstants.bitcoin, color: Colors.orange)
+///    CryptoIcon(CryptoIcons.btc, color: Colors.orange)
 ///    ```
 library crypto_icons;
 
@@ -24,6 +24,7 @@ import 'src/crypto_symbol_map.dart';
 
 export 'src/crypto_icon.dart';
 export 'src/crypto_icons_data.dart';
+export 'src/crypto_symbol_map.dart';
 
 /// Extension methods for CryptoIcons
 extension CryptoIconsExtension on CryptoIcons {
@@ -37,6 +38,9 @@ extension CryptoIconsExtension on CryptoIcons {
   /// ```
   ///
   /// Throws an [ArgumentError] if the symbol is not found.
+  ///
+  /// Note: Some icons may be corrupted in the font file. If you encounter issues,
+  /// wrap the icon in a try-catch block or use a fallback icon.
   static IconData fromSymbol(String symbol) {
     // Get the complete symbol map with all cryptocurrency icons
     final symbolMap = CryptoSymbolMap.getCompleteSymbolMap();
