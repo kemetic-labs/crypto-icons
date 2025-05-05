@@ -24,7 +24,6 @@ import 'src/crypto_symbol_map.dart';
 
 export 'src/crypto_icon.dart';
 export 'src/crypto_icons_data.dart';
-export 'src/crypto_constants.dart';
 
 /// Extension methods for CryptoIcons
 extension CryptoIconsExtension on CryptoIcons {
