@@ -45,6 +45,11 @@ void main() {
       expect(() => CryptoIconsExtension.fromSymbol('invalid'),
           throwsArgumentError);
     });
+
+    test('fromSymbol returns correct icon for special case symbols', () {
+      expect(CryptoIconsExtension.fromSymbol('2give'), equals(CryptoIcons.twoGive));
+      expect(CryptoIconsExtension.fromSymbol('0xbtc'), equals(CryptoIcons.zeroXbtc));
+    });
   });
 
   group('CryptoIcon widget', () {

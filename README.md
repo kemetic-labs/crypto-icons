@@ -128,7 +128,7 @@ CryptoIcon(
 // With container
 Container(
   decoration: BoxDecoration(
-    color: Colors.blue.withOpacity(0.1),
+    color: Colors.blue.withValues(alpha: 0.1),
     shape: BoxShape.circle,
   ),
   child: Padding(

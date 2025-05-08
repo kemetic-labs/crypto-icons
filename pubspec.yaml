@@ -1,6 +1,6 @@
 name: crypto_icons
 description: A comprehensive Flutter package providing access to 474+ cryptocurrency icons as a custom font. Optimized for commercial applications with MIT license.
-version: 0.1.0
+version: 1.0.0
 repository: https://github.com/kemetic-labs/crypto-icons
 homepage: https://github.com/kemetic-labs/crypto-icons
 issue_tracker: https://github.com/kemetic-labs/crypto-icons/issues
