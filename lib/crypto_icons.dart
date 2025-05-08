@@ -26,23 +26,8 @@ export 'src/crypto_icon.dart';
 export 'src/crypto_icons_data.dart';
 export 'src/crypto_symbol_map.dart';
 
-/// Extension methods for CryptoIcons
 extension CryptoIconsExtension on CryptoIcons {
-  /// Returns an IconData for the given cryptocurrency symbol.
-  ///
-  /// The [symbol] parameter is case-insensitive.
-  ///
-  /// Example:
-  /// ```dart
-  /// IconData bitcoinIcon = CryptoIconsExtension.fromSymbol('BTC');
-  /// ```
-  ///
-  /// Throws an [ArgumentError] if the symbol is not found.
-  ///
-  /// Note: Some icons may be corrupted in the font file. If you encounter issues,
-  /// wrap the icon in a try-catch block or use a fallback icon.
   static IconData fromSymbol(String symbol) {
-    // Get the complete symbol map with all cryptocurrency icons
     final symbolMap = CryptoSymbolMap.getCompleteSymbolMap();
 
     final normalizedSymbol = symbol.toLowerCase();

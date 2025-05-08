@@ -1,15 +1,8 @@
 import 'package:flutter/widgets.dart';
 
-/// A custom icon font for cryptocurrency symbols.
-///
-/// This class provides access to cryptocurrency symbols as a custom font.
-/// It contains all 474 icons from the cryptocurrency-icons-font library.
-/// https://github.com/mirgj/cryptocurrency-icons-font
 class CryptoIcons {
   CryptoIcons._();
 
-  /// Font family name. This should match the font family name in pubspec.yaml
-  /// when you add the actual font files.
   static const String _fontFamily = 'CryptocurrencyIcons';
 
   // Common Cryptocurrencies

@@ -2,14 +2,11 @@
 import 'package:flutter/widgets.dart';
 import 'crypto_icons_data.dart';
 
-/// Provides a complete mapping of all cryptocurrency symbols to their respective IconData objects.
+
+
 class CryptoSymbolMap {
   CryptoSymbolMap._();
 
-  /// Returns a complete mapping of all cryptocurrency symbols to their respective IconData objects.
-  ///
-  /// This map contains all 474 cryptocurrency symbols mapped to their respective IconData objects.
-  /// It is used by the [CryptoIconsExtension.fromSymbol] method to look up icons by symbol.
   static Map<String, IconData> getCompleteSymbolMap() {
     return <String, IconData>{
       'aave': CryptoIcons.aave,
