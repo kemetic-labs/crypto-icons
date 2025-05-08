@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-
 class CryptoIcon extends StatelessWidget {
   final IconData icon;
   final double size;

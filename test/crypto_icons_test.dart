@@ -18,7 +18,8 @@ void main() {
   group('CryptoIconsExtension', () {
     test('fromSymbol returns correct icon for valid symbol', () {
       expect(CryptoIconsExtension.fromSymbol('btc'), equals(CryptoIcons.btc));
-      expect(CryptoIconsExtension.fromSymbol('BTC'), equals(CryptoIcons.btc)); // Case insensitive
+      expect(CryptoIconsExtension.fromSymbol('BTC'),
+          equals(CryptoIcons.btc)); // Case insensitive
       expect(CryptoIconsExtension.fromSymbol('eth'), equals(CryptoIcons.eth));
       expect(CryptoIconsExtension.fromSymbol('doge'), equals(CryptoIcons.doge));
       expect(CryptoIconsExtension.fromSymbol('usdt'), equals(CryptoIcons.usdt));
@@ -27,12 +28,32 @@ void main() {
     test('fromSymbol supports all cryptocurrency symbols', () {
       // Test a random sampling of symbols from different categories
       final testSymbols = [
-        'btc', 'eth', 'bnb', 'ada', 'sol', 'xrp', 'dot', 'doge', 'ltc', 'link',
-        'usdt', 'usdc', 'dai', 'tusd',
-        'uni', 'aave', 'comp', 'mkr', 'sushi',
-        'xmr', 'zec', 'dash',
+        'btc',
+        'eth',
+        'bnb',
+        'ada',
+        'sol',
+        'xrp',
+        'dot',
+        'doge',
+        'ltc',
+        'link',
+        'usdt',
+        'usdc',
+        'dai',
+        'tusd',
+        'uni',
+        'aave',
+        'comp',
+        'mkr',
+        'sushi',
+        'xmr',
+        'zec',
+        'dash',
         'safemoon',
-        'mana', 'sand', 'enj'
+        'mana',
+        'sand',
+        'enj'
       ];
 
       for (final symbol in testSymbols) {
@@ -47,8 +68,10 @@ void main() {
     });
 
     test('fromSymbol returns correct icon for special case symbols', () {
-      expect(CryptoIconsExtension.fromSymbol('2give'), equals(CryptoIcons.twoGive));
-      expect(CryptoIconsExtension.fromSymbol('0xbtc'), equals(CryptoIcons.zeroXbtc));
+      expect(CryptoIconsExtension.fromSymbol('2give'),
+          equals(CryptoIcons.twoGive));
+      expect(CryptoIconsExtension.fromSymbol('0xbtc'),
+          equals(CryptoIcons.zeroXbtc));
     });
   });
 

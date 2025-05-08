@@ -8,7 +8,8 @@ void main() {
     final symbolMap = CryptoSymbolMap.getCompleteSymbolMap();
 
     // Verify that the map contains 474 entries
-    expect(symbolMap.length, equals(474), reason: 'Symbol map should contain 474 entries');
+    expect(symbolMap.length, equals(474),
+        reason: 'Symbol map should contain 474 entries');
 
     // Log some statistics about the symbol map (only in tests)
     debugPrint('Symbol map contains ${symbolMap.length} entries');
@@ -21,8 +22,10 @@ void main() {
     ];
 
     for (final coin in importantCoins) {
-      expect(symbolMap.containsKey(coin), isTrue, reason: 'Symbol map should contain $coin');
-      expect(symbolMap[coin], isA<IconData>(), reason: 'Symbol $coin should map to an IconData');
+      expect(symbolMap.containsKey(coin), isTrue,
+          reason: 'Symbol map should contain $coin');
+      expect(symbolMap[coin], isA<IconData>(),
+          reason: 'Symbol $coin should map to an IconData');
     }
   });
 }

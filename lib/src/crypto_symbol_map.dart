@@ -1,8 +1,5 @@
-
 import 'package:flutter/widgets.dart';
 import 'crypto_icons_data.dart';
-
-
 
 class CryptoSymbolMap {
   CryptoSymbolMap._();
