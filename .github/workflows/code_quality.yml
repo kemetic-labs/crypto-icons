@@ -46,8 +46,8 @@ jobs:
       
       - name: Verify Flutter and Dart versions
         run: |
-          flutter --version
-          dart --version
+          fvm flutter --version
+          fvm dart --version
 
       - name: Cache Pub dependencies
         uses: actions/cache@v4
@@ -60,10 +60,10 @@ jobs:
             pub-dependencies-${{ runner.os }}-
       
       - name: Install dependencies
-        run: flutter pub get 
+        run: fvm flutter pub get 
       
       - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
+        run: fvm dart format --output=none --set-exit-if-changed .
       
       - name: Analyze project source
-        run: flutter analyze
+        run: fvm flutter analyze
