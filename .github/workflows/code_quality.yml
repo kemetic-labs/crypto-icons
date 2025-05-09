@@ -1,0 +1,69 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  lint:
+    name: Lint and Analyze (Flutter ${{ matrix.flutter-version }})
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false 
+      matrix:
+        flutter-version: 
+          - '3.29.3'
+          - '3.27.4'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1.6.2 
+
+      - name: Install FVM
+        run: dart pub global activate fvm
+
+      - name: Cache FVM Flutter SDK
+        uses: actions/cache@v4
+        id: fvm_sdk_cache
+        with:
+          path: ${{ env.HOME }}/fvm/versions
+          key: fvm-sdk-${{ runner.os }}-${{ matrix.flutter-version }}
+          restore-keys: |
+            fvm-sdk-${{ runner.os }}-
+
+      - name: Install and setup Flutter version with FVM
+        run: |
+          fvm install ${{ matrix.flutter-version }} --verbose
+          fvm use ${{ matrix.flutter-version }}
+          echo "$HOME/fvm/default/bin" >> $GITHUB_PATH
+          echo "$HOME/fvm/default/bin/cache/dart-sdk/bin" >> $GITHUB_PATH
+      
+      - name: Verify Flutter and Dart versions
+        run: |
+          fvm flutter --version
+          fvm dart --version
+
+      - name: Cache Pub dependencies
+        uses: actions/cache@v4
+        id: pub_cache
+        with:
+          path: ${{ env.HOME }}/.pub-cache
+          key: pub-dependencies-${{ runner.os }}-${{ matrix.flutter-version }}-${{ hashFiles('**/pubspec.lock') }}
+          restore-keys: |
+            pub-dependencies-${{ runner.os }}-${{ matrix.flutter-version }}-
+            pub-dependencies-${{ runner.os }}-
+      
+      - name: Install dependencies
+        run: fvm flutter pub get 
+      
+      - name: Verify formatting
+        run: fvm dart format --output=none --set-exit-if-changed .
+      
+      - name: Analyze project source
+        run: fvm flutter analyze
