@@ -13,7 +13,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        flutter-version: ['3.29.0']
+        flutter-version: 
+          - '3.29.3'
+          - '3.27.4'
+          - '3.22.0'
+          - '3.13.10'
+          - '3.10.10'
     
     steps:
       - uses: actions/checkout@v3

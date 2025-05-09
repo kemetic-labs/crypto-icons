@@ -17,6 +17,9 @@ jobs:
         flutter-version: 
           - '3.29.3'
           - '3.27.4'
+          - '3.22.0'
+          - '3.13.10'
+          - '3.10.10'
 
     steps:
       - name: Checkout repository
