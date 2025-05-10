@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A comprehensive collection of over 474 cryptocurrency icons, provided as a Flutter package. Designed for seamless integration and optimal performance, CryptoIcons offers a wide range of production-ready icons under the permissive MIT License.
+A collection of over 474 cryptocurrency logos/icons, provided as a Flutter package. Designed for seamless integration and optimal performance, CryptoIcons offers a wide range of production-ready icons under the permissive MIT License.
 
 ## Key Features
 
@@ -62,7 +62,7 @@ Ideal for scenarios involving dynamic data, such as API responses. The `fromSymb
 // Great for API integration and handling numeric symbols
 Icon(CryptoIconsExtension.fromSymbol('BTC'))
 Icon(CryptoIconsExtension.fromSymbol('eth'))
-Icon(CryptoIconsExtension.fromSymbol('2give')) // Handles numeric symbols like '2give' or '0xbtc'
+Icon(CryptoIconsExtension.fromSymbol('2give'))
 ```
 
 ### Using the `CryptoIcon` Widget
@@ -78,40 +78,13 @@ CryptoIcon(CryptoIcons.btc, color: Colors.orange)
 
 The collection covers a broad spectrum of digital assets:
 
-### Major Cryptocurrencies
+### Examples 
 
 ```dart
 CryptoIcons.btc      // Bitcoin
 CryptoIcons.eth      // Ethereum
 CryptoIcons.bnb      // Binance Coin
 CryptoIcons.ada      // Cardano
-// ... and many more
-```
-
-### Stablecoins
-
-```dart
-CryptoIcons.usdt     // Tether
-CryptoIcons.usdc     // USD Coin
-// ... and many more
-```
-
-### DeFi Tokens
-
-```dart
-CryptoIcons.uni      // Uniswap
-CryptoIcons.aave     // Aave
-// ... and many more
-```
-
-### Special Cases (Numeric Symbols)
-
-For symbols beginning with numbers, use the `fromSymbol` extension method:
-
-```dart
-// Correct usage for symbols starting with numbers
-CryptoIconsExtension.fromSymbol('2give')
-CryptoIconsExtension.fromSymbol('0xbtc')
 ```
 
 ## Styling
@@ -151,7 +124,6 @@ ListView.builder(
     return ListTile(
       leading: Icon(CryptoIconsExtension.fromSymbol(crypto.symbol)),
       title: Text(crypto.name),
-      // subtitle: Text(crypto.price), // Example additional data
     );
   },
 )
@@ -159,7 +131,7 @@ ListView.builder(
 
 ## Advantages
 
-CryptoIcons offers significant advantages for developers building cryptocurrency-related applications:
+CryptoIcons offers great advantages for developers building cryptocurrency-related applications:
 
 * **Accelerated Development:** Provides ready-to-use assets, reducing design and integration time.
 * **High-Quality Assets:** Ensures a professional and consistent look and feel for your application.
@@ -171,7 +143,7 @@ CryptoIcons offers significant advantages for developers building cryptocurrency
 This package incorporates the excellent cryptocurrency icon font originally created by [Mirko Garozzo](https://github.com/mirgj). The original font project is available at:
 - [github.com/mirgj/cryptocurrency-icons-font](https://github.com/mirgj/cryptocurrency-icons-font)
 
-We extend our gratitude to Mirko Garozzo for creating this valuable resource.
+We thank Mirko Garozzo for creating this valuable resource.
 
 ## License
 
