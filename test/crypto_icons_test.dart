@@ -5,7 +5,6 @@ import 'package:crypto_icons/crypto_icons.dart';
 void main() {
   group('CryptoIcons', () {
     test('contains common cryptocurrency icons', () {
-      // Test a few common cryptocurrencies
       expect(CryptoIcons.btc, isA<IconData>());
       expect(CryptoIcons.eth, isA<IconData>());
       expect(CryptoIcons.bnb, isA<IconData>());
@@ -26,7 +25,6 @@ void main() {
     });
 
     test('fromSymbol supports all cryptocurrency symbols', () {
-      // Test a random sampling of symbols from different categories
       final testSymbols = [
         'btc',
         'eth',

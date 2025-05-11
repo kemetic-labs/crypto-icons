@@ -4,17 +4,13 @@ import 'package:flutter/widgets.dart';
 
 void main() {
   test('CryptoSymbolMap contains all 474 cryptocurrency icons', () {
-    // Get the symbol map
     final symbolMap = CryptoSymbolMap.getCompleteSymbolMap();
 
-    // Verify that the map contains 474 entries
     expect(symbolMap.length, equals(474),
         reason: 'Symbol map should contain 474 entries');
 
-    // Log some statistics about the symbol map (only in tests)
     debugPrint('Symbol map contains ${symbolMap.length} entries');
 
-    // Check a few important cryptocurrencies to make sure they're included
     final importantCoins = [
       'btc', 'eth', 'bnb', 'ada', 'sol', 'xrp', 'dot', 'doge', 'ltc', 'link',
       'usdt', 'usdc', 'dai', 'uni', 'aave', 'comp', 'mkr', 'xmr', 'zec', 'dash',
