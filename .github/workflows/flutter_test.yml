@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        flutter-version: 
+        flutter-version:
+          - '3.32.0' 
           - '3.29.3'
           - '3.27.4'
           - '3.22.3'

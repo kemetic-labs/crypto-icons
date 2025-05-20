@@ -19,7 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  golden_toolkit: ^0.15.0  # For visual regression testing
+  golden_toolkit: ^0.15.0
 
 flutter:
   fonts:
