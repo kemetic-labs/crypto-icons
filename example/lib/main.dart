@@ -83,7 +83,7 @@ class CryptoIconGrid extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  CryptoIconsExtension.fromSymbol(symbol),
+                  CryptoIcons.fromSymbol(symbol),
                   size: 56.0,
                   color: cryptoColors[symbol],
                 ),

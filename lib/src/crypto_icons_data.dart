@@ -1,7 +1,9 @@
 import 'package:flutter/widgets.dart';
 
-class CryptoIcons {
-  CryptoIcons._();
+import '../crypto_icons.dart';
+
+class CryptoIconsData {
+  CryptoIconsData._();
 
   static const String _fontFamily = 'CryptocurrencyIcons';
 

@@ -10,7 +10,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:crypto_icons_example/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Crypto Icons smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const CryptoIconsDemo());
   });

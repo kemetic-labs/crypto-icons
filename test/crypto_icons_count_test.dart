@@ -14,7 +14,7 @@ void main() {
     final importantCoins = [
       'btc', 'eth', 'bnb', 'ada', 'sol', 'xrp', 'dot', 'doge', 'ltc', 'link',
       'usdt', 'usdc', 'dai', 'uni', 'aave', 'comp', 'mkr', 'xmr', 'zec', 'dash',
-      '2give', '0xbtc' // Special cases that use twoGive and zeroXbtc constants
+      '2give', '0xbtc'
     ];
 
     for (final coin in importantCoins) {
