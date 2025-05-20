@@ -16,16 +16,12 @@ void main() {
 
   group('CryptoIcons', () {
     test('fromSymbol returns correct icon for valid symbol', () {
-      expect(
-          CryptoIcons.fromSymbol('btc'), equals(CryptoIconsData.btc));
+      expect(CryptoIcons.fromSymbol('btc'), equals(CryptoIconsData.btc));
       expect(CryptoIcons.fromSymbol('BTC'),
           equals(CryptoIconsData.btc)); // Case insensitive
-      expect(
-          CryptoIcons.fromSymbol('eth'), equals(CryptoIconsData.eth));
-      expect(CryptoIcons.fromSymbol('doge'),
-          equals(CryptoIconsData.doge));
-      expect(CryptoIcons.fromSymbol('usdt'),
-          equals(CryptoIconsData.usdt));
+      expect(CryptoIcons.fromSymbol('eth'), equals(CryptoIconsData.eth));
+      expect(CryptoIcons.fromSymbol('doge'), equals(CryptoIconsData.doge));
+      expect(CryptoIcons.fromSymbol('usdt'), equals(CryptoIconsData.usdt));
     });
 
     test('fromSymbol supports all cryptocurrency symbols', () {
@@ -64,16 +60,15 @@ void main() {
       }
     });
 
-    test('fromSymbol throws CryptoIconNotFoundException for invalid symbol', () {
+    test('fromSymbol throws CryptoIconNotFoundException for invalid symbol',
+        () {
       expect(() => CryptoIcons.fromSymbol('invalid'),
           throwsA(isA<CryptoIconNotFoundException>()));
     });
 
     test('fromSymbol returns correct icon for special case symbols', () {
-      expect(CryptoIcons.fromSymbol('2give'),
-          equals(CryptoIconsData.twoGive));
-      expect(CryptoIcons.fromSymbol('0xbtc'),
-          equals(CryptoIconsData.zeroXbtc));
+      expect(CryptoIcons.fromSymbol('2give'), equals(CryptoIconsData.twoGive));
+      expect(CryptoIcons.fromSymbol('0xbtc'), equals(CryptoIconsData.zeroXbtc));
     });
   });
 

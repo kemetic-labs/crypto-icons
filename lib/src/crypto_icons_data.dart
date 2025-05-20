@@ -1,7 +1,5 @@
 import 'package:flutter/widgets.dart';
 
-import '../crypto_icons.dart';
-
 class CryptoIconsData {
   CryptoIconsData._();
 

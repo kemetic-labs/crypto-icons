@@ -12,7 +12,8 @@ void main() {
       expect(CryptoIcons.fromSymbol('sol'), isA<IconData>());
     });
 
-    test('fromSymbol throws CryptoIconNotFoundException for invalid symbol', () {
+    test('fromSymbol throws CryptoIconNotFoundException for invalid symbol',
+        () {
       expect(
         () => CryptoIcons.fromSymbol('invalid_symbol'),
         throwsA(isA<CryptoIconNotFoundException>()),
