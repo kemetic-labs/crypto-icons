@@ -4,6 +4,8 @@
 
 A collection of over 474 cryptocurrency logos/icons, provided as a Flutter package. Designed for seamless integration and optimal performance, CryptoIcons offers a wide range of production-ready icons under the permissive MIT License.
 
+![Screenshot](./screenshot.png)
+
 ## Key Features
 
 * **Extensive Coverage:** Includes icons for a vast array of major cryptocurrencies, tokens, and DeFi projects.
