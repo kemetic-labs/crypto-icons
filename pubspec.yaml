@@ -5,7 +5,6 @@ repository: https://github.com/kemetic-labs/crypto-icons
 homepage: https://github.com/kemetic-labs/crypto-icons
 issue_tracker: https://github.com/kemetic-labs/crypto-icons/issues
 documentation: https://github.com/kemetic-labs/crypto-icons#readme
-publish_to: https://pub.dev
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
