@@ -4,7 +4,7 @@ test:
 	fvm flutter test
 
 coverage:
-	./scripts/check_coverage.sh
+	./tool/check_coverage.sh
 
 format:
 	fvm dart format .
