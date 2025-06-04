@@ -8,6 +8,9 @@
 .history
 .idea
 .iml
+# Mac
+.DS_Store
+
 
 # Flutter repo-specific
 /bin/cache/
@@ -27,9 +30,10 @@
 /packages/flutter/coverage/
 version
 analysis_benchmark.json
-
+doc/api/
 # packages file containing multi-root paths
 .packages.generated
+pubspec.lock
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -109,7 +113,6 @@ coverage/
 
 # Symbols
 app.*.symbols
-
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
