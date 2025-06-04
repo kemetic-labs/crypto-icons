@@ -1,13 +1,12 @@
 library crypto_icons;
 
+import 'package:crypto_icons/src/exceptions.dart';
 import 'package:flutter/widgets.dart';
-import 'src/crypto_symbol_map.dart';
-import 'src/exceptions.dart';
 
-export 'src/crypto_icon.dart';
-export 'src/crypto_icons_data.dart';
-export 'src/crypto_symbol_map.dart';
-export 'src/exceptions.dart';
+import 'src/crypto_symbol_map.dart' show CryptoSymbolMap;
+export 'src/crypto_icon.dart' show CryptoIcon;
+export 'src/crypto_icons_data.dart' show CryptoIconsData;
+export 'src/exceptions.dart' show CryptoIconNotFoundException;
 
 class CryptoIcons {
   static IconData fromSymbol(String symbol) {
