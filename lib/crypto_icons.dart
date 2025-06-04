@@ -1,5 +1,3 @@
-library crypto_icons;
-
 import 'package:crypto_icons/src/exceptions.dart';
 import 'package:flutter/widgets.dart';
 
